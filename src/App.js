@@ -1,6 +1,6 @@
-import TodoApp from "./components/TodoApp";
-function App() {
-    return <TodoApp></TodoApp>;
-}
+import Login from "./components/login";
 
+function App() {
+    return <Login />;
+}
 export default App;
