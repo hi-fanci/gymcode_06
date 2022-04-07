@@ -11,7 +11,10 @@ const Input = (props) => {
     };
     return (
         <div>
+            <label htmlFor={name}>{name}</label>
+
             <input
+                id={name}
                 type={type}
                 name={name}
                 value={value}

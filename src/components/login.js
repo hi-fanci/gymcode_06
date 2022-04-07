@@ -12,7 +12,7 @@ const Login = () => {
         _state[e.name] = e.value;
 
         switch (e.name) {
-            case "name": {
+            case "ten": {
                 if (e.value.length < 5) {
                     _error[e.name] = "khong duoc nho hon 5";
                 } else if (e.value.length > 20) {
@@ -24,7 +24,7 @@ const Login = () => {
                 break;
             }
 
-            case "password": {
+            case "matkhau": {
                 if (e.value.length < 8) {
                     _error[e.name] = "khong dc nho hon 5";
                 } else {
@@ -33,7 +33,7 @@ const Login = () => {
                 break;
             }
 
-            case "mail": {
+            case "taikhoan": {
                 if (e.value.length < 8) {
                     _error[e.name] = "khong duoc nho hon 5";
                 } else if (
@@ -54,30 +54,25 @@ const Login = () => {
 
     return (
         <div>
-            <p>username</p>
             <Input
                 type="text"
-                name="name"
-                value={formData.name}
-                error={formError.name}
+                name="ten"
+                value={formData.ten}
+                error={formError.ten}
                 reCallback={handleInputChange}
             />
-
-            <p>password</p>
             <Input
                 type="password"
-                name="password"
-                value={formData.password}
-                error={formError.password}
+                name="matkhau"
+                value={formData.matkhau}
+                error={formError.matkhau}
                 reCallback={handleInputChange}
             />
-
-            <p>gmail</p>
             <Input
-                type="mail"
-                name="mail"
-                value={formData.mail}
-                error={formError.mail}
+                type="gmail"
+                name="taikhoan"
+                value={formData.taikhoan}
+                error={formError.taikhoan}
                 reCallback={handleInputChange}
             />
         </div>
