@@ -72,7 +72,7 @@ const Login = () => {
                 reCallback={handleInputChange}
             />
 
-            <p>address</p>
+            <p>gmail</p>
             <Input
                 type="mail"
                 name="mail"
