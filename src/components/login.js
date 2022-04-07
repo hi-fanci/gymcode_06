@@ -33,9 +33,15 @@ const Login = () => {
                 break;
             }
 
-            case "address": {
+            case "mail": {
                 if (e.value.length < 8) {
                     _error[e.name] = "khong duoc nho hon 5";
+                } else if (
+                    !e.value.match(
+                        /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+                    )
+                ) {
+                    _error[e.name] = "sai dinh dang";
                 } else {
                     _error[e.name] = null;
                 }
@@ -68,10 +74,10 @@ const Login = () => {
 
             <p>address</p>
             <Input
-                type="text"
-                name="address"
-                value={formData.address}
-                error={formError.address}
+                type="mail"
+                name="mail"
+                value={formData.mail}
+                error={formError.mail}
                 reCallback={handleInputChange}
             />
         </div>
